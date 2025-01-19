@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Erreur from "./pages/Erreur";
 import FLogement from './pages/FLogement';
 import Home from "./pages/Home";
+import './styles/main.scss';
 
 function App() {
 
