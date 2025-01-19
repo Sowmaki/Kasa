@@ -6,7 +6,10 @@ import { useState } from "react";
 
 const Collapse = ({ title, info }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const render = typeof info === "string" ? info : info.map((el, index) => <p className="collapse__dropdown__element" key={index}>{el}</p>);
+  const render = typeof info === "string" ?
+    info
+    :
+    info.map((el, index) => <p className="collapse__dropdown__element" key={index}>{el}</p>)
 
   function handleClick() {
     setIsOpen(!isOpen)

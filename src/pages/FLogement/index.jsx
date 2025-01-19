@@ -5,6 +5,7 @@ import Collapse from "../../components/Collapse";
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Host from '../../components/Host';
+import Slideshow from "../../components/Slideshow";
 import Tag from '../../components/Tag';
 
 const FLogement = ({ logements }) => {
@@ -17,7 +18,7 @@ const FLogement = ({ logements }) => {
     <>
       <Header />
       <main className='flogement'>
-        <img className="flogement__cover" src={selectedLogement.cover} alt={`photo de ${selectedLogement.title}`} />
+        <Slideshow pictures={selectedLogement.pictures} />
         <div className="flogements__infos">
           <div className="flogement__left-wrapper">
             <h1 className='flogement__left-wrapper__title'>{selectedLogement.title}</h1>
