@@ -1,0 +1,31 @@
+@import '../../styles/abstracts/_variables.scss';
+@import '../../styles/abstracts/_mixins.scss';
+
+.footer {
+  @include center-flex(column, center, center);
+  gap: 29px;
+  padding: 66px 0 29px;
+  background-color: black;
+
+  font-weight: medium;
+
+  @media (max-width:$mobile) {
+    padding: 66px 8.3vw 58px;
+  }
+
+  &__logo {
+    width: 122px;
+  }
+
+  &__copyrights {
+    width: 134px;
+    padding: 0 19px;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+
+    @media (max-width:$mobile) {
+      font-size: 0.75rem;
+    }
+  }
+}

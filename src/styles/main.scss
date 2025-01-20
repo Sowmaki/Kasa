@@ -1,7 +1,20 @@
 // Abstracts
-@import './abstracts/variables.scss';
-@import './abstracts/mixins.scss';
+@import './abstracts/_variables.scss';
+@import './abstracts/_mixins.scss';
 
 // Base styles
 @import './base/reset.scss';
+@import './base/base.scss';
 // @import './base/typography.scss';
+
+//Components
+
+@import '../components/Banner/Banner.module.scss';
+@import '../components/Collapse/Collapse.module.scss';
+@import '../components/Footer/Footer.scss';
+@import '../components/Header/Header.scss';
+@import '../components/Host/Host.module.scss';
+@import '../components/LogementCard/LogementCard.module.scss';
+@import '../components/LogementsWrapper/LogementsWrapper.scss';
+@import '../components/Slideshow/Slideshow.module.scss';
+@import '../components/Tag/Tag.module.scss';

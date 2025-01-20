@@ -1,0 +1,36 @@
+@import '../../styles/abstracts/_variables.scss';
+@import '../../styles/abstracts/_mixins.scss';
+
+.header {
+  @include center-flex(row, space-between, center);
+  margin: 40px 7vw 0;
+
+  @media (max-width:$mobile) {
+    margin: 20px 5.3vw;
+  }
+
+  &__logo {
+    width: 210px;
+
+    @media (max-width:$mobile) {
+      width: 38.6vw;
+    }
+  }
+
+  &__nav {
+    @include center-flex(row, center, center);
+    gap: 4vw;
+  }
+
+  &__link {
+    font-size: 1.5 rem;
+    font-weight: medium;
+    color: black;
+    text-transform: uppercase;
+
+    @media (max-width:$mobile) {
+      font-size: 0.75rem;
+    }
+  }
+
+}
