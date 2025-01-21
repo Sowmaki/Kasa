@@ -1,0 +1,36 @@
+.logement-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &__container {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  &__filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 55%, rgba(0, 0, 0, 0.41) 100%);
+  }
+
+  &__cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin: 0.5em;
+
+  }
+}

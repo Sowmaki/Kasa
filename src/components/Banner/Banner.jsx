@@ -4,7 +4,8 @@ function Banner({ text, image }) {
   return (
     <div className='banner'>
       <img className="banner__img" src={image} alt="" />
-      <p>{text}</p>
+      <div className="banner__filter"></div>
+      <p className="banner__txt">{text}</p>
     </div>
   )
 }

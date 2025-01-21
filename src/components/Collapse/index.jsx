@@ -25,7 +25,7 @@ const Collapse = ({ title, info }) => {
           className={`collapse__icon ${isOpen ? 'collapse__icon--open' : ''}`}
         />
       </div>
-      {isOpen && <div className="collapse__dropdown">{render}</div>}
+      {info && isOpen && <div className="collapse__dropdown">{render}</div>}
     </section>
   )
 }

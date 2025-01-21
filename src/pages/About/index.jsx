@@ -12,7 +12,7 @@ const About = () => {
       <main className="about">
         <Banner image="src/assets/images/banner-img_about.png" />
         <ul className="about-collapse-wrapper">
-          {sections.map((section, index) => <Collapse key={`${section}${index}`} title={section} />)}
+          {sections.map((section, index) => <Collapse info={null} key={`${section}${index}`} title={section} />)}
         </ul>
       </main>
       <Footer />

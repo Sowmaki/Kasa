@@ -27,10 +27,29 @@
     font-weight: medium;
     color: black;
     text-transform: uppercase;
+    position: relative;
 
     @media (max-width:$mobile) {
       font-size: 0.75rem;
     }
+  }
+
+  &__link:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: black;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  &__link:hover:after {
+    width: 100%;
+    left: 0;
   }
 
 }
