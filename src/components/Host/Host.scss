@@ -1,0 +1,15 @@
+@import '../../styles//abstracts//mixins';
+@import '../../styles//abstracts//variables';
+
+.host {
+  @include center-flex(row, flex-end, center);
+
+
+  &__name {}
+
+  &__picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+}

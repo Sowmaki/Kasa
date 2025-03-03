@@ -1,0 +1,73 @@
+@import "../../styles//abstracts/mixins";
+@import "../../styles//abstracts/variables";
+
+.flogement {
+  &__infos {
+    @include center-flex(row, space-between, center);
+    margin-top: 30px;
+
+    @media(max-width:$mobile) {
+      @include center-flex(column, center, flex-start);
+    }
+  }
+
+  &__left-wrapper {
+
+    &__title {
+      color: $primary-color;
+      font-weight: 500;
+      font-size: 2.25rem;
+      line-height: 142.6%;
+
+      @media(max-width:$mobile) {
+        font-size: 1.125rem;
+        margin-bottom: 5px;
+      }
+    }
+
+    &__location {
+      font-size: 1.125rem;
+
+      @media(max-width:$mobile) {
+        font-size: 0.875rem;
+      }
+    }
+
+    &__tags {
+      @include center-flex(row, normal, center);
+      gap: 10px;
+
+
+      .tag {
+        @include center-flex(row, center, center);
+        height: 25px;
+        min-width: 95px;
+        padding: 0 10px;
+        border-radius: 10px;
+        background-color: $primary-color;
+        font-weight: bold;
+        font-size: 0.875rem;
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+
+        @media(max-width:$mobile) {
+          height: 18px;
+          min-width: 84px;
+          font-size: 0.625rem;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+
+  &__details {
+    @include center-flex(row, space-between, flex-start);
+    gap: 5.2vw;
+
+    @media (max-width:$mobile) {
+      @include center-flex(column, center, center)
+    }
+  }
+}

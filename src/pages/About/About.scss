@@ -1,0 +1,13 @@
+@import '../../styles/abstracts/mixins';
+@import '../../styles/abstracts/variables';
+
+.about {
+  @include center-flex(column, center, center);
+
+
+  &__collapse-wrapper {
+    @include center-flex(column, center, center);
+    width: 71vw;
+    gap: 30px;
+  }
+}

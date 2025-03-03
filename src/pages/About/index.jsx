@@ -2,6 +2,7 @@ import Banner from "../../components/Banner/Banner";
 import Collapse from "../../components/Collapse";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import '../About/About.scss';
 
 const About = () => {
   const sections = ["Fiabilité", "Respect", "Service", "Sécurité"]
@@ -11,7 +12,7 @@ const About = () => {
       <Header />
       <main className="about">
         <Banner image="src/assets/images/banner-img_about.png" />
-        <ul className="about-collapse-wrapper">
+        <ul className="about__collapse-wrapper">
           {sections.map((section, index) => <Collapse info={null} key={`${section}${index}`} title={section} />)}
         </ul>
       </main>

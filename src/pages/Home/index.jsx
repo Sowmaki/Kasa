@@ -2,7 +2,7 @@ import Banner from "../../components/Banner/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import LogementsWrapper from "../../components/LogementsWrapper";
-
+import '../Home/Home.scss';
 
 
 const Home = ({ logements }) => {

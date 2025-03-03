@@ -2,14 +2,22 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
 import { useState } from "react";
+import "../Collapse/Collapse.scss";
 
 
 const Collapse = ({ title, info }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const render = typeof info === "string" ?
-    info
-    :
-    info.map((el, index) => <p className="collapse__dropdown__element" key={index}>{el}</p>)
+  const render = info
+    ?
+    (typeof info === "string" ?
+      <p className="collapse__dropdown__description">{info}</p>
+      :
+      <ul className="collapse__dropdown__equipments">
+        {info.map((el, index) =>
+          <p className="collapse__dropdown__element" key={index}>{el}</p>)}
+      </ul>
+    )
+    : ''
 
   function handleClick() {
     setIsOpen(!isOpen)
@@ -25,7 +33,7 @@ const Collapse = ({ title, info }) => {
           className={`collapse__icon ${isOpen ? 'collapse__icon--open' : ''}`}
         />
       </div>
-      {info && isOpen && <div className="collapse__dropdown">{render}</div>}
+      <div className={`collapse__dropdown ${!isOpen && 'collapse__dropdown--closed'}`}>{render}</div>
     </section>
   )
 }

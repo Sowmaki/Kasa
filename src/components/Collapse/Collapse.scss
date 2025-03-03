@@ -1,0 +1,63 @@
+@import "../../styles//abstracts/mixins";
+@import "../../styles//abstracts/variables";
+
+.collapse {
+  width: 100%;
+
+  &__topbar {
+    @include center-flex(row, space-between, center);
+    background-color: $primary-color;
+    border-radius: 5px;
+  }
+
+  &__title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 10px;
+
+    @media (max-width:$mobile) {
+      font-size: 0.813rem;
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+    color: white;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+    margin: 10px;
+
+    @media (max-width:$mobile) {
+      font-size: 1rem;
+    }
+  }
+
+  &__icon--open {
+    transform: rotate(180deg);
+  }
+
+  &__dropdown {
+    max-height: 800px;
+    transition: max-height 0.5s ease-in-out;
+    overflow: hidden;
+    background-color: $gray;
+    border-radius: 5px;
+
+    &--closed {
+      max-height: 0;
+    }
+
+    &__description,
+    &__equipments {
+      font-size: 1.125rem;
+      margin: 1em 20px;
+
+      @media (max-width:$mobile) {
+        font-size: 0.75rem;
+      }
+    }
+
+    &__element {}
+  }
+}

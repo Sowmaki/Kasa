@@ -7,6 +7,7 @@ import Header from '../../components/Header';
 import Host from '../../components/Host';
 import Slideshow from "../../components/Slideshow";
 import Tag from '../../components/Tag';
+import "../FLogement/FLogement.scss";
 
 const FLogement = ({ logements }) => {
   const { id } = useParams();
@@ -19,7 +20,7 @@ const FLogement = ({ logements }) => {
       <Header />
       <main className='flogement'>
         <Slideshow pictures={selectedLogement.pictures} />
-        <div className="flogements__infos">
+        <div className="flogement__infos">
           <div className="flogement__left-wrapper">
             <h1 className='flogement__left-wrapper__title'>{selectedLogement.title}</h1>
             <p className="flogement__left-wrapper__location">{selectedLogement.location}</p>
@@ -44,7 +45,7 @@ const FLogement = ({ logements }) => {
             </div>
           </div>
         </div>
-        <div className="flogements__details">
+        <div className="flogement__details">
           <Collapse title="Description" info={selectedLogement.description} />
           <Collapse title="Equipements" info={selectedLogement.equipments} />
         </div>

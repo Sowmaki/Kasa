@@ -7,7 +7,7 @@
   padding: 66px 0 29px;
   background-color: black;
 
-  font-weight: medium;
+  font-weight: 500;
 
   @media (max-width:$mobile) {
     padding: 66px 8.3vw 58px;
@@ -18,13 +18,13 @@
   }
 
   &__copyrights {
-    width: 134px;
     padding: 0 19px;
     text-align: center;
     color: white;
     font-size: 1.5rem;
 
     @media (max-width:$mobile) {
+      width: 134px;
       font-size: 0.75rem;
     }
   }
