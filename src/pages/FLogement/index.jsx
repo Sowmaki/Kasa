@@ -56,6 +56,6 @@ const FLogement = ({ logements }) => {
     (
       <Erreur title="505" message="Oups! Ce logement n'existe pas." />
     )
-};
+}
 
 export default FLogement;

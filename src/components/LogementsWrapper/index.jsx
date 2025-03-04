@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import LogementCard from "../LogementCard";
 import '../LogementsWrapper/LogementsWrapper.scss';
 
@@ -8,5 +9,10 @@ const LogementsWrapper = ({ logements }) => {
     </ul>
   )
 }
+
+LogementsWrapper.propTypes = {
+  logements: PropTypes.string,
+}
+
 
 export default LogementsWrapper

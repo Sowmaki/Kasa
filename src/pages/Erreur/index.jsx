@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
@@ -22,6 +23,11 @@ const Erreur = ({ title, message }) => {
       <Footer />
     </>
   )
-};
+}
+
+Erreur.propTypes = {
+  title: PropTypes.string,
+  message: PropTypes.string
+}
 
 export default Erreur;
