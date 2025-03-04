@@ -1,14 +1,22 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import "../Erreur/Erreur.scss";
 
-const Erreur = () => {
+const Erreur = ({ title, message }) => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate(`/${title}`);
+  }, [title, navigate]);
+
   return (
     <>
       <Header />
       <main className="error">
-        <h1 className="error__title">404</h1>
-        <p className="error__message">Oups! La page que vous demandez n'existe pas.</p>
+        <h1 className="error__title">{title}</h1>
+        <p className="error__message">{message}</p>
         <Link to="/" className="error__home-link">Retour sur la page d'accueil</Link>
       </main>
       <Footer />

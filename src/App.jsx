@@ -16,8 +16,8 @@ function App() {
           <Route path="/" element={<Home logements={logements} />} />
           <Route path="/about" element={<About />} />
           <Route path="/FLogement/:id" element={<FLogement logements={logements} />} />
-          <Route path="/404" element={<Erreur />} />
-          <Route path="*" element={<Erreur />} />
+          <Route path="*" element={<Erreur title="404" message="Oups! La page que vous demandez n'existe pas." />} />
+          <Route path="/505" element={<Erreur title="505" message="Oups! Ce logement n'existe pas." />} />
         </Routes>
 
       </Router>

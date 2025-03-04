@@ -9,6 +9,10 @@
   overflow: hidden;
   border-radius: 25px;
 
+  @media (max-width: $mobile) {
+    height: 255px;
+  }
+
   &__items {
     position: absolute;
     top: 50%;
@@ -24,6 +28,10 @@
     font-size: 5rem;
     color: white;
     padding: 10px;
+
+    @media (max-width: $mobile) {
+      font-size: 1.25rem;
+    }
   }
 
   &__image-number {

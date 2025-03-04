@@ -3,13 +3,33 @@
 
 .host {
   @include center-flex(row, flex-end, center);
+  margin-bottom: 21px;
 
+  @media(max-width:$mobile) {
+    margin-bottom: 0;
+  }
 
-  &__name {}
+  &__name {
+    width: 55%;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: $primary-color;
+    text-align: end;
+    margin-right: 10px;
+
+    @media(max-width:$mobile) {
+      font-size: 0.75rem;
+    }
+  }
 
   &__picture {
     width: 64px;
     height: 64px;
     border-radius: 50%;
+
+    @media(max-width:$mobile) {
+      width: 32px;
+      height: 32px;
+    }
   }
 }

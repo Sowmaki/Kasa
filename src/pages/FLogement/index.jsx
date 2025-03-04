@@ -7,15 +7,16 @@ import Header from '../../components/Header';
 import Host from '../../components/Host';
 import Slideshow from "../../components/Slideshow";
 import Tag from '../../components/Tag';
+import Erreur from "../Erreur";
 import "../FLogement/FLogement.scss";
 
 const FLogement = ({ logements }) => {
   const { id } = useParams();
   const selectedLogement = logements.find(logement => logement.id === id)
   const scale = [1, 2, 3, 4, 5]
-  const rating = selectedLogement.rating
+  const rating = selectedLogement?.rating
 
-  return (
+  return selectedLogement ? (
     <>
       <Header />
       <main className='flogement'>
@@ -38,8 +39,6 @@ const FLogement = ({ logements }) => {
                   icon={faStar}
                   style={{
                     color: el <= rating ? "#FF6060" : "#E3E3E3",
-                    fontSize: "24px",
-                    marginRight: "5px",
                   }}
                 />)}
             </div>
@@ -53,7 +52,10 @@ const FLogement = ({ logements }) => {
       <Footer />
     </>
 
-  );
+  ) :
+    (
+      <Erreur title="505" message="Oups! Ce logement n'existe pas." />
+    )
 };
 
 export default FLogement;

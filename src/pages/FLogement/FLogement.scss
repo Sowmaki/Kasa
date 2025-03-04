@@ -4,10 +4,11 @@
 .flogement {
   &__infos {
     @include center-flex(row, space-between, center);
-    margin-top: 30px;
+    margin: 24px 0;
 
     @media(max-width:$mobile) {
       @include center-flex(column, center, flex-start);
+      margin: 13px 0;
     }
   }
 
@@ -27,6 +28,7 @@
 
     &__location {
       font-size: 1.125rem;
+      font-weight: 500;
 
       @media(max-width:$mobile) {
         font-size: 0.875rem;
@@ -59,6 +61,33 @@
         }
       }
     }
+  }
+
+  &__right-wrapper {
+
+    @media(max-width:$mobile) {
+      margin-top: 16px;
+      width: 100%;
+      @include center-flex(row-reverse, space-between, center)
+    }
+
+    &__rating {
+      @include center-flex(row, right, center);
+      gap: 10px;
+
+      @media(max-width:$mobile) {
+        gap: 2px;
+      }
+    }
+
+    &__rating-star {
+      font-size: 24px;
+
+      @media(max-width:$mobile) {
+        font-size: 18px;
+      }
+    }
+
   }
 
 

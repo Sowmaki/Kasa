@@ -1,0 +1,44 @@
+@import "../../styles/abstracts/mixins";
+@import "../../styles/abstracts/variables";
+
+.error {
+  @include center-flex(column, center, center);
+  gap: 139px;
+  margin-bottom: 139px;
+
+  @media(max-width:$mobile) {
+    gap: 113px;
+    margin-bottom: 113px;
+  }
+
+  &__title {
+    color: $primary-color;
+    font-weight: 700;
+    font-size: 18rem;
+
+    @media(max-width:$mobile) {
+      font-size: 6rem;
+    }
+  }
+
+  &__message {
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 2.25rem;
+    text-align: center;
+
+    @media(max-width:$mobile) {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__home-link {
+    font-weight: 500;
+    font-size: 1.125rem;
+    text-decoration: underline;
+
+    @media(max-width:$mobile) {
+      font-size: 0.875rem;
+    }
+  }
+}

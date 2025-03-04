@@ -24,6 +24,7 @@
     font-size: 1.5rem;
 
     @media (max-width:$mobile) {
+      padding: 0;
       width: 134px;
       font-size: 0.75rem;
     }
