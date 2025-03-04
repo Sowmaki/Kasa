@@ -28,18 +28,20 @@ const Slideshow = ({ pictures }) => {
 
   return (
     <div className="carousel">
-      <div className="carousel__items">
-        <FontAwesomeIcon
-          onClick={handleClickLeft}
-          icon={faChevronLeft}
-          className="carousel__arrow carousel__arrow--left"
-        />
-        <FontAwesomeIcon
-          onClick={handleClickRight}
-          icon={faChevronRight}
-          className="carousel__arrow carousel__arrow--right"
-        />
-      </div>
+      {pictures.length > 1 &&
+        <div className="carousel__items">
+          <FontAwesomeIcon
+            onClick={handleClickLeft}
+            icon={faChevronLeft}
+            className="carousel__arrow carousel__arrow--left"
+          />
+          <FontAwesomeIcon
+            onClick={handleClickRight}
+            icon={faChevronRight}
+            className="carousel__arrow carousel__arrow--right"
+          />
+        </div>
+      }
       <div className={`carousel__image-container`}>
         <img
           className={`carousel__image ${addClass ? 'fade-in' : ''}`}
@@ -47,7 +49,7 @@ const Slideshow = ({ pictures }) => {
           alt={`Slide ${currentIndex + 1}`}
         />
       </div>
-      <div className="carousel__image-number">{`${currentIndex + 1}/${pictures.length}`}</div>
+      <div className="carousel__image-number">{pictures.length > 1 ? `${currentIndex + 1}/${pictures.length}` : ''}</div>
     </div>
 
   )
