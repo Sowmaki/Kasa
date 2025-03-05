@@ -1,5 +1,6 @@
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import "../Slideshow/Slideshow.scss";
 

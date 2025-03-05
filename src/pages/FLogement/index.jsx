@@ -13,10 +13,12 @@ import "../FLogement/FLogement.scss";
 const FLogement = ({ logements }) => {
   const { id } = useParams();
   const selectedLogement = logements.find(logement => logement.id === id)
+  if (!selectedLogement) return (<Erreur title="404" message="Oups! Ce logement n'existe pas." />)
+
   const scale = [1, 2, 3, 4, 5]
   const rating = selectedLogement?.rating
 
-  return selectedLogement ? (
+  return (
     <>
       <Header />
       <main className='flogement'>
@@ -51,11 +53,7 @@ const FLogement = ({ logements }) => {
       </main>
       <Footer />
     </>
-
-  ) :
-    (
-      <Erreur title="505" message="Oups! Ce logement n'existe pas." />
-    )
+  )
 }
 
 export default FLogement;
