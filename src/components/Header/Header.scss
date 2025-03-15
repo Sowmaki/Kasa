@@ -32,6 +32,11 @@
       font-size: 0.75rem;
       text-transform: uppercase;
     }
+
+    &.active {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
   }
 
   &__link:after {
